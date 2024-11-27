@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\azure-webapp-dmytro\\azure-webapp-dmytro.csproj",
+      "projectUniqueName": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\azure-webapp-dmytro.csproj",
       "projectName": "azure-webapp-dmytro",
-      "projectPath": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\azure-webapp-dmytro\\azure-webapp-dmytro.csproj",
+      "projectPath": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\azure-webapp-dmytro.csproj",
       "packagesPath": "C:\\Users\\dmitry.petrichenko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\azure-webapp-dmytro\\obj\\",
+      "outputPath": "C:\\Users\\dmitry.petrichenko\\Documents\\Projects\\azure-webapp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dmitry.petrichenko\\AppData\\Roaming\\NuGet\\NuGet.Config"
