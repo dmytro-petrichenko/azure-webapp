@@ -50,14 +50,10 @@ def call(body) {
                     beforeAgent true
                     expression { return shouldCheckSnapshots() }
                 }
-                environment {
-                    OS_TYPE = WINDOWS_OS_TYPE()
-                    ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                    ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                }
                 steps {
                     script {
-                        withEnv(environmentFile.getWindows("jenkins")) {
+                        def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                        withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
                             checkIfUsingSnapshotDependencies()
                         }
                     }
@@ -73,14 +69,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.androidProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.androidProjects, this.&buildAar, true)
                                 }
@@ -100,14 +92,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.amazonProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.amazonProjects, this.&buildAar, true)
                                 }
@@ -127,14 +115,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.dotNetProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.dotNetProjects, this.&buildDotNetSolution, true)
                                 }
@@ -154,14 +138,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.iosProjects != null }
                         }
-                        environment {
-                            OS_TYPE = OSX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getMacOsx("osxbuilduser")) {
+                                def stageEnv = buildArtifactoryEnv(OSX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getMacOsx("osxbuilduser")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.iosProjects, this.&buildIosLib, true)
                                 }
@@ -188,14 +168,10 @@ def call(body) {
                     beforeAgent true
                     expression { return pipelineParams.unityPluginProject != null }
                 }
-                environment {
-                    OS_TYPE = WINDOWS_OS_TYPE()
-                    ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                    ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                }
                 steps {
                     script {
-                        withEnv(environmentFile.getWindows("jenkins")) {
+                        def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                        withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
                             buildPlugin(pipelineParams.unityPluginProject, true)
                             publishPlugin(pipelineParams.unityPluginProject, true)
                         }
@@ -220,14 +196,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.sampleAppAndroidProject != null }
                         }
-                        environment {
-                            OS_TYPE = WINDOWS_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getWindows("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
                                     buildGooglePlaySampleApp(pipelineParams.sampleAppAndroidProject)
                                 }
                             }
@@ -246,14 +218,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.sampleAppAmazonProject != null }
                         }
-                        environment {
-                            OS_TYPE = WINDOWS_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getWindows("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
                                     buildAmazonSampleApp(pipelineParams.sampleAppAmazonProject)
                                 }
                             }
@@ -274,14 +242,12 @@ def call(body) {
                                     beforeAgent true
                                     expression { return pipelineParams.sampleAppIosProject != null }
                                 }
-                                environment {
-                                    OS_TYPE = WINDOWS_OS_TYPE()
-                                    ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                                    ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                                }
                                 steps {
-                                    withEnv(environmentFile.getWindows("jenkins")) {
-                                        buildSampleAppXcodeProject(pipelineParams.sampleAppIosProject)
+                                    script {
+                                        def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                        withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
+                                            buildSampleAppXcodeProject(pipelineParams.sampleAppIosProject)
+                                        }
                                     }
                                 }
                                 post {
@@ -298,14 +264,10 @@ def call(body) {
                                     beforeAgent true
                                     expression { return pipelineParams.sampleAppIosProject != null }
                                 }
-                                environment {
-                                    OS_TYPE = OSX_OS_TYPE()
-                                    ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                                    ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                                }
                                 steps {
                                     script {
-                                        withEnv(environmentFile.getMacOsx("osxbuilduser")) {
+                                        def stageEnv = buildArtifactoryEnv(OSX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                        withEnv(stageEnv + environmentFile.getMacOsx("osxbuilduser")) {
                                             buildSampleAppIpa(pipelineParams.sampleAppIosProject)
                                         }
                                     }
@@ -361,14 +323,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.androidProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.androidProjects, this.&buildAar, false)
                                 }
@@ -389,14 +347,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.amazonProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.amazonProjects, this.&buildAar, false)
                                 }
@@ -417,14 +371,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.dotNetProjects != null }
                         }
-                        environment {
-                            OS_TYPE = LINUX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getLinux("jenkins")) {
+                                def stageEnv = buildArtifactoryEnv(LINUX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getLinux("jenkins")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.dotNetProjects, this.&buildDotNetSolution, false)
                                 }
@@ -445,14 +395,10 @@ def call(body) {
                             beforeAgent true
                             expression { return pipelineParams.iosProjects != null }
                         }
-                        environment {
-                            OS_TYPE = OSX_OS_TYPE()
-                            ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                            ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                        }
                         steps {
                             script {
-                                withEnv(environmentFile.getMacOsx("osxbuilduser")) {
+                                def stageEnv = buildArtifactoryEnv(OSX_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                                withEnv(stageEnv + environmentFile.getMacOsx("osxbuilduser")) {
                                     cleanWs()
                                     applyToAllProjects(pipelineParams.iosProjects, this.&buildIosLib, false)
                                 }
@@ -480,14 +426,10 @@ def call(body) {
                     beforeAgent true
                     expression { return pipelineParams.unityPluginProject != null }
                 }
-                environment {
-                    OS_TYPE = WINDOWS_OS_TYPE()
-                    ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
-                    ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                }
                 steps {
                     script {
-                        withEnv(environmentFile.getWindows("jenkins")) {
+                        def stageEnv = buildArtifactoryEnv(WINDOWS_OS_TYPE(), pipelineParams.vaultArtifactoryTeam)
+                        withEnv(stageEnv + environmentFile.getWindows("jenkins")) {
                             buildPlugin(pipelineParams.unityPluginProject, false)
                             publishPlugin(pipelineParams.unityPluginProject, false)
                         }
@@ -578,6 +520,15 @@ def executeCommand(String command) {
     } else {
         powershell(script: command, returnStdout: true)?.trim()
     }
+}
+
+List<String> buildArtifactoryEnv(String osType, String vaultArtifactoryTeam) {
+    env.OS_TYPE = osType
+    return [
+        "OS_TYPE=${osType}",
+        "ARTIFACTORY_USER=${getArtifactoryUser(vaultArtifactoryTeam)}",
+        "ARTIFACTORY_PASSWORD=${getArtifactoryPassword(vaultArtifactoryTeam)}"
+    ]
 }
 
 String getArtifactoryUser(String vaultArtifactoryTeam) {
