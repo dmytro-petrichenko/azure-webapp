@@ -51,9 +51,9 @@ def call(body) {
                     expression { return shouldCheckSnapshots() }
                 }
                 environment {
+                    OS_TYPE = WINDOWS_OS_TYPE()
                     ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                     ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                    OS_TYPE = WINDOWS_OS_TYPE()
                 }
                 steps {
                     script {
@@ -74,9 +74,9 @@ def call(body) {
                             expression { return pipelineParams.androidProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -101,9 +101,9 @@ def call(body) {
                             expression { return pipelineParams.amazonProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -128,9 +128,9 @@ def call(body) {
                             expression { return pipelineParams.dotNetProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -155,9 +155,9 @@ def call(body) {
                             expression { return pipelineParams.iosProjects != null }
                         }
                         environment {
+                            OS_TYPE = OSX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = OSX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -189,9 +189,9 @@ def call(body) {
                     expression { return pipelineParams.unityPluginProject != null }
                 }
                 environment {
+                    OS_TYPE = WINDOWS_OS_TYPE()
                     ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                     ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                    OS_TYPE = WINDOWS_OS_TYPE()
                 }
                 steps {
                     script {
@@ -221,9 +221,9 @@ def call(body) {
                             expression { return pipelineParams.sampleAppAndroidProject != null }
                         }
                         environment {
+                            OS_TYPE = WINDOWS_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = WINDOWS_OS_TYPE()
                         }
                         steps {
                             script {
@@ -247,9 +247,9 @@ def call(body) {
                             expression { return pipelineParams.sampleAppAmazonProject != null }
                         }
                         environment {
+                            OS_TYPE = WINDOWS_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = WINDOWS_OS_TYPE()
                         }
                         steps {
                             script {
@@ -275,9 +275,9 @@ def call(body) {
                                     expression { return pipelineParams.sampleAppIosProject != null }
                                 }
                                 environment {
+                                    OS_TYPE = WINDOWS_OS_TYPE()
                                     ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                                     ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                                    OS_TYPE = WINDOWS_OS_TYPE()
                                 }
                                 steps {
                                     withEnv(environmentFile.getWindows("jenkins")) {
@@ -299,9 +299,9 @@ def call(body) {
                                     expression { return pipelineParams.sampleAppIosProject != null }
                                 }
                                 environment {
+                                    OS_TYPE = OSX_OS_TYPE()
                                     ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                                     ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                                    OS_TYPE = OSX_OS_TYPE()
                                 }
                                 steps {
                                     script {
@@ -362,9 +362,9 @@ def call(body) {
                             expression { return pipelineParams.androidProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -390,9 +390,9 @@ def call(body) {
                             expression { return pipelineParams.amazonProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -418,9 +418,9 @@ def call(body) {
                             expression { return pipelineParams.dotNetProjects != null }
                         }
                         environment {
+                            OS_TYPE = LINUX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = LINUX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -446,9 +446,9 @@ def call(body) {
                             expression { return pipelineParams.iosProjects != null }
                         }
                         environment {
+                            OS_TYPE = OSX_OS_TYPE()
                             ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                             ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                            OS_TYPE = OSX_OS_TYPE()
                         }
                         steps {
                             script {
@@ -481,9 +481,9 @@ def call(body) {
                     expression { return pipelineParams.unityPluginProject != null }
                 }
                 environment {
+                    OS_TYPE = WINDOWS_OS_TYPE()
                     ARTIFACTORY_USER = getArtifactoryUser(pipelineParams.vaultArtifactoryTeam)
                     ARTIFACTORY_PASSWORD = getArtifactoryPassword(pipelineParams.vaultArtifactoryTeam)
-                    OS_TYPE = WINDOWS_OS_TYPE()
                 }
                 steps {
                     script {
