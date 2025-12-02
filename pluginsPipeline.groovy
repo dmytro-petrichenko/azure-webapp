@@ -532,13 +532,15 @@ List<String> buildArtifactoryEnv(String osType, String vaultArtifactoryTeam) {
 }
 
 String getArtifactoryUser(String vaultArtifactoryTeam) {
-    println "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "username")} - getArtifactoryUser"
-    return "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "username")}"
+    String username = "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "username")}"
+    echo "Fetched Artifactory username from 1Password for team ${vaultArtifactoryTeam}"
+    return username
 }
 
 String getArtifactoryPassword(String vaultArtifactoryTeam) {
-    println "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "password")} - getArtifactoryPassword"
-    return "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "password")}"
+    String password = "${secretManager.getSecretFromOnePassword("CIJenkinsSecrets", "ci--jfrog", "password")}"
+    echo "Fetched Artifactory password from 1Password for team ${vaultArtifactoryTeam}"
+    return password
 }
 
 def checkIfUsingSnapshotDependencies() {
