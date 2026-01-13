@@ -54,3 +54,4 @@ nunit-*.xml
 **/.idea/
 *.user
 .DS_Store
+.DS_Store
