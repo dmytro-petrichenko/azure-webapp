@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cnBHecW1p7Q=",
+  "success": true,
+  "projectFilePath": "/Users/dmitry.petrichenko/RiderProjects/Solution001/build/_build.csproj",
+  "expectedPackageFiles": [
+    "/Users/dmitry.petrichenko/.nuget/packages/nuke.common/10.1.0/nuke.common.10.1.0.nupkg.sha512",
+    "/Users/dmitry.petrichenko/.nuget/packages/microsoft.netcore.app.ref/8.0.22/microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/dmitry.petrichenko/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.22/microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
+    "/Users/dmitry.petrichenko/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.22/microsoft.netcore.app.host.osx-arm64.8.0.22.nupkg.sha512"
+  ],
+  "logs": []
+}

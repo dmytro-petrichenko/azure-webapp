@@ -1,0 +1,291 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Nuke.Common/10.1.0": {
+        "type": "package",
+        "build": {
+          "build/Nuke.Common.props": {},
+          "build/Nuke.Common.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Nuke.Common/10.1.0": {
+      "sha512": "bymYGBes5vZUEu4eMkp1zDAbXcEpJQgRo6UcIGIWqsCUpSZIwfozuyRKVpk6lWP5KX6ep8x/XC08KLXlC6D6yg==",
+      "type": "package",
+      "path": "nuke.common/10.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "analyzers/dotnet/cs/Microsoft.VisualStudio.SolutionPersistence.dll",
+        "analyzers/dotnet/cs/Newtonsoft.Json.dll",
+        "analyzers/dotnet/cs/Nuke.Build.Shared.dll",
+        "analyzers/dotnet/cs/Nuke.SolutionModel.dll",
+        "analyzers/dotnet/cs/Nuke.SourceGenerators.dll",
+        "analyzers/dotnet/cs/Nuke.Utilities.IO.Globbing.dll",
+        "analyzers/dotnet/cs/Nuke.Utilities.dll",
+        "analyzers/dotnet/cs/Scriban.dll",
+        "build/Nuke.Common.props",
+        "build/Nuke.Common.targets",
+        "build/netcore/HtmlAgilityPack.dll",
+        "build/netcore/Humanizer.dll",
+        "build/netcore/JetBrains.Annotations.dll",
+        "build/netcore/Newtonsoft.Json.dll",
+        "build/netcore/NuGet.Common.dll",
+        "build/netcore/NuGet.Configuration.dll",
+        "build/netcore/NuGet.Frameworks.dll",
+        "build/netcore/NuGet.Packaging.dll",
+        "build/netcore/NuGet.Versioning.dll",
+        "build/netcore/Nuke.MSBuildTasks.deps.json",
+        "build/netcore/Nuke.MSBuildTasks.dll",
+        "build/netcore/Nuke.MSBuildTasks.targets",
+        "build/netcore/Nuke.MSBuildTasks.xml",
+        "build/netcore/Nuke.Tooling.Generator.dll",
+        "build/netcore/Nuke.Tooling.Generator.dll.config",
+        "build/netcore/Nuke.Tooling.Generator.xml",
+        "build/netcore/Nuke.Tooling.dll",
+        "build/netcore/Nuke.Tooling.xml",
+        "build/netcore/Nuke.Utilities.Net.dll",
+        "build/netcore/Nuke.Utilities.Net.xml",
+        "build/netcore/Nuke.Utilities.Text.Json.dll",
+        "build/netcore/Nuke.Utilities.Text.Json.xml",
+        "build/netcore/Nuke.Utilities.dll",
+        "build/netcore/Nuke.Utilities.xml",
+        "build/netcore/Serilog.dll",
+        "build/netcore/System.Security.Cryptography.Pkcs.dll",
+        "build/netcore/System.Security.Cryptography.ProtectedData.dll",
+        "build/netcore/af/Humanizer.resources.dll",
+        "build/netcore/ar/Humanizer.resources.dll",
+        "build/netcore/az/Humanizer.resources.dll",
+        "build/netcore/bg/Humanizer.resources.dll",
+        "build/netcore/bn/Humanizer.resources.dll",
+        "build/netcore/ca/Humanizer.resources.dll",
+        "build/netcore/cs/Humanizer.resources.dll",
+        "build/netcore/da/Humanizer.resources.dll",
+        "build/netcore/de/Humanizer.resources.dll",
+        "build/netcore/el/Humanizer.resources.dll",
+        "build/netcore/es/Humanizer.resources.dll",
+        "build/netcore/fa/Humanizer.resources.dll",
+        "build/netcore/fi/Humanizer.resources.dll",
+        "build/netcore/fil/Humanizer.resources.dll",
+        "build/netcore/fr/Humanizer.resources.dll",
+        "build/netcore/he/Humanizer.resources.dll",
+        "build/netcore/hr/Humanizer.resources.dll",
+        "build/netcore/hu/Humanizer.resources.dll",
+        "build/netcore/hy/Humanizer.resources.dll",
+        "build/netcore/id/Humanizer.resources.dll",
+        "build/netcore/is/Humanizer.resources.dll",
+        "build/netcore/it/Humanizer.resources.dll",
+        "build/netcore/ja/Humanizer.resources.dll",
+        "build/netcore/ko/Humanizer.resources.dll",
+        "build/netcore/ku/Humanizer.resources.dll",
+        "build/netcore/lb/Humanizer.resources.dll",
+        "build/netcore/lt/Humanizer.resources.dll",
+        "build/netcore/lv/Humanizer.resources.dll",
+        "build/netcore/ms/Humanizer.resources.dll",
+        "build/netcore/mt/Humanizer.resources.dll",
+        "build/netcore/nb/Humanizer.resources.dll",
+        "build/netcore/nl/Humanizer.resources.dll",
+        "build/netcore/pl/Humanizer.resources.dll",
+        "build/netcore/pt-BR/Humanizer.resources.dll",
+        "build/netcore/pt/Humanizer.resources.dll",
+        "build/netcore/ro/Humanizer.resources.dll",
+        "build/netcore/ru/Humanizer.resources.dll",
+        "build/netcore/runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll",
+        "build/netcore/sk/Humanizer.resources.dll",
+        "build/netcore/sl/Humanizer.resources.dll",
+        "build/netcore/sr-Latn/Humanizer.resources.dll",
+        "build/netcore/sr/Humanizer.resources.dll",
+        "build/netcore/sv/Humanizer.resources.dll",
+        "build/netcore/th/Humanizer.resources.dll",
+        "build/netcore/tr/Humanizer.resources.dll",
+        "build/netcore/uk/Humanizer.resources.dll",
+        "build/netcore/uz-Cyrl-UZ/Humanizer.resources.dll",
+        "build/netcore/uz-Latn-UZ/Humanizer.resources.dll",
+        "build/netcore/vi/Humanizer.resources.dll",
+        "build/netcore/zh-CN/Humanizer.resources.dll",
+        "build/netcore/zh-Hans/Humanizer.resources.dll",
+        "build/netcore/zh-Hant/Humanizer.resources.dll",
+        "build/netfx/HtmlAgilityPack.dll",
+        "build/netfx/Humanizer.dll",
+        "build/netfx/JetBrains.Annotations.dll",
+        "build/netfx/Newtonsoft.Json.dll",
+        "build/netfx/NuGet.Common.dll",
+        "build/netfx/NuGet.Configuration.dll",
+        "build/netfx/NuGet.Frameworks.dll",
+        "build/netfx/NuGet.Packaging.dll",
+        "build/netfx/NuGet.Versioning.dll",
+        "build/netfx/Nuke.MSBuildTasks.dll",
+        "build/netfx/Nuke.MSBuildTasks.targets",
+        "build/netfx/Nuke.MSBuildTasks.xml",
+        "build/netfx/Nuke.Tooling.Generator.dll",
+        "build/netfx/Nuke.Tooling.Generator.dll.config",
+        "build/netfx/Nuke.Tooling.Generator.xml",
+        "build/netfx/Nuke.Tooling.dll",
+        "build/netfx/Nuke.Tooling.xml",
+        "build/netfx/Nuke.Utilities.Net.dll",
+        "build/netfx/Nuke.Utilities.Net.xml",
+        "build/netfx/Nuke.Utilities.Text.Json.dll",
+        "build/netfx/Nuke.Utilities.Text.Json.xml",
+        "build/netfx/Nuke.Utilities.dll",
+        "build/netfx/Nuke.Utilities.xml",
+        "build/netfx/Serilog.dll",
+        "build/netfx/System.Buffers.dll",
+        "build/netfx/System.Collections.Immutable.dll",
+        "build/netfx/System.ComponentModel.Annotations.dll",
+        "build/netfx/System.Diagnostics.DiagnosticSource.dll",
+        "build/netfx/System.Memory.dll",
+        "build/netfx/System.Numerics.Vectors.dll",
+        "build/netfx/System.Runtime.CompilerServices.Unsafe.dll",
+        "build/netfx/System.Threading.Channels.dll",
+        "build/netfx/System.Threading.Tasks.Extensions.dll",
+        "build/netfx/af/Humanizer.resources.dll",
+        "build/netfx/ar/Humanizer.resources.dll",
+        "build/netfx/az/Humanizer.resources.dll",
+        "build/netfx/bg/Humanizer.resources.dll",
+        "build/netfx/bn/Humanizer.resources.dll",
+        "build/netfx/ca/Humanizer.resources.dll",
+        "build/netfx/cs/Humanizer.resources.dll",
+        "build/netfx/da/Humanizer.resources.dll",
+        "build/netfx/de/Humanizer.resources.dll",
+        "build/netfx/el/Humanizer.resources.dll",
+        "build/netfx/es/Humanizer.resources.dll",
+        "build/netfx/fa/Humanizer.resources.dll",
+        "build/netfx/fi/Humanizer.resources.dll",
+        "build/netfx/fil/Humanizer.resources.dll",
+        "build/netfx/fr/Humanizer.resources.dll",
+        "build/netfx/he/Humanizer.resources.dll",
+        "build/netfx/hr/Humanizer.resources.dll",
+        "build/netfx/hu/Humanizer.resources.dll",
+        "build/netfx/hy/Humanizer.resources.dll",
+        "build/netfx/id/Humanizer.resources.dll",
+        "build/netfx/is/Humanizer.resources.dll",
+        "build/netfx/it/Humanizer.resources.dll",
+        "build/netfx/ja/Humanizer.resources.dll",
+        "build/netfx/ko/Humanizer.resources.dll",
+        "build/netfx/ku/Humanizer.resources.dll",
+        "build/netfx/lb/Humanizer.resources.dll",
+        "build/netfx/lt/Humanizer.resources.dll",
+        "build/netfx/lv/Humanizer.resources.dll",
+        "build/netfx/ms/Humanizer.resources.dll",
+        "build/netfx/mt/Humanizer.resources.dll",
+        "build/netfx/nb/Humanizer.resources.dll",
+        "build/netfx/nl/Humanizer.resources.dll",
+        "build/netfx/pl/Humanizer.resources.dll",
+        "build/netfx/pt-BR/Humanizer.resources.dll",
+        "build/netfx/pt/Humanizer.resources.dll",
+        "build/netfx/ro/Humanizer.resources.dll",
+        "build/netfx/ru/Humanizer.resources.dll",
+        "build/netfx/sk/Humanizer.resources.dll",
+        "build/netfx/sl/Humanizer.resources.dll",
+        "build/netfx/sr-Latn/Humanizer.resources.dll",
+        "build/netfx/sr/Humanizer.resources.dll",
+        "build/netfx/sv/Humanizer.resources.dll",
+        "build/netfx/th/Humanizer.resources.dll",
+        "build/netfx/tr/Humanizer.resources.dll",
+        "build/netfx/uk/Humanizer.resources.dll",
+        "build/netfx/uz-Cyrl-UZ/Humanizer.resources.dll",
+        "build/netfx/uz-Latn-UZ/Humanizer.resources.dll",
+        "build/netfx/vi/Humanizer.resources.dll",
+        "build/netfx/zh-CN/Humanizer.resources.dll",
+        "build/netfx/zh-Hans/Humanizer.resources.dll",
+        "build/netfx/zh-Hant/Humanizer.resources.dll",
+        "icon.png",
+        "lib/net10.0/Nuke.Common.dll",
+        "lib/net10.0/Nuke.Common.xml",
+        "nuke.common.10.1.0.nupkg.sha512",
+        "nuke.common.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Nuke.Common >= 10.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/dmitry.petrichenko/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/dmitry.petrichenko/RiderProjects/Solution001/build/_build.csproj",
+      "projectName": "_build",
+      "projectPath": "/Users/dmitry.petrichenko/RiderProjects/Solution001/build/_build.csproj",
+      "packagesPath": "/Users/dmitry.petrichenko/.nuget/packages/",
+      "outputPath": "/Users/dmitry.petrichenko/RiderProjects/Solution001/build/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/dmitry.petrichenko/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Nuke.Common": {
+            "target": "Package",
+            "version": "[10.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.22, 8.0.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[8.0.22, 8.0.22]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.22, 8.0.22]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
